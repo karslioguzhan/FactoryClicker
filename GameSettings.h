@@ -2,6 +2,7 @@
 #include <raylib.h>
 #include <iostream>
 #include <raygui.h>
+#include <memory>
 
 
 
@@ -13,7 +14,7 @@ private:
 	std::string gameName{ "Factory Clicker" };
 	int gameFPS{ 60 };
 	bool isFirstStart{ true };
-
+	Image menuImage{ LoadImage("Images/StartMenuCar.png") };
 public:
 	int getWindowWidth() const;
 	int getWindowHeight() const;

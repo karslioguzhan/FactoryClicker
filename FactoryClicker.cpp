@@ -20,7 +20,7 @@ int main()
     {
         BeginDrawing();
         gameSettings.startLoadingMenu();
-        ClearBackground(BLACK);
+        ClearBackground(DARKGRAY);
         EndDrawing();
     }
 }

@@ -31,6 +31,13 @@ void GameSettings::startLoadingMenu()
 {
 	GuiSetStyle(DEFAULT, TEXT_SIZE, 20);
 	GuiSetStyle(BUTTON, TEXT_ALIGNMENT, TEXT_ALIGN_CENTER);
+
+	//TODO Texture is loaded every frame --> should be optimized
+	/* Move to heap
+	std::unique_ptr<Texture> menuTexture = std::make_unique<Texture>(LoadTextureFromImage(menuImage));
+	*/
+	Texture menuTexture{ LoadTextureFromImage(menuImage) };
+	DrawTexture(menuTexture, (windowWidth - 672) / 2, 50, WHITE);
 	
 	// Create button style
 	float buttonWidth{ 300 };
